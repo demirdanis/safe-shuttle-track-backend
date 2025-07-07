@@ -16,11 +16,11 @@ jobs:
       - name: Apply hasura migrations
         uses: smplrspace/hasura-action@v3
         with:
-          args: migrate apply --project safe-shuttle-track --database-name postgres-safe-shuttle-track-core
+          args: migrate apply --project api-gateway --database-name postgres-safe-shuttle-track-core
         env:
           HASURA_ENDPOINT: ${{ secrets.HASURA_ENDPOINT }}
           HASURA_ADMIN_SECRET: ${{ secrets.HASURA_SECRET }}
-          HASURA_WORKDIR: safe-shuttle-track
+          HASURA_WORKDIR: api-gateway
           HASURA_ENGINE_VERSION: v2.45.1
       - name: Migration OK for Safe Shuttle Track Core
         run: echo "Migration OK for Safe Shuttle Track Core"

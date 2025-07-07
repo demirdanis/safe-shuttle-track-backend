@@ -1,0 +1,29 @@
+{
+  "name": "safe-shuttle-track-backend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start:gateway": "cd api-gateway && pnpm start",
+    "start:auth": "cd auth-service && pnpm start",
+    "start:user": "cd user-service && pnpm start",
+    "start:trip": "cd trip-service && pnpm start",
+    "start:notification": "cd notification-service && pnpm start",
+    "start:tracking": "cd tracking-service && pnpm start",
+    "dev:gateway": "cd api-gateway && pnpm start:dev",
+    "dev:auth": "cd auth-service && pnpm start:dev",
+    "dev:user": "cd user-service && pnpm start:dev",
+    "dev:trip": "cd trip-service && pnpm start:dev",
+    "dev:notification": "cd notification-service && pnpm start:dev",
+    "dev:tracking": "cd tracking-service && pnpm start:dev",
+    "install:all": "pnpm install && cd api-gateway && pnpm install && cd ../auth-service && pnpm install && cd ../user-service && pnpm install && cd ../trip-service && pnpm install && cd ../notification-service && pnpm install && cd ../tracking-service && pnpm install",
+    "build:all": "cd api-gateway && pnpm build && cd ../auth-service && pnpm build && cd ../user-service && pnpm build && cd ../trip-service && pnpm build && cd ../notification-service && pnpm build && cd ../tracking-service && pnpm build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "docker:clean": "docker-compose down -v && docker system prune -f"
+  }, 
+  "devDependencies": {
+    "@changesets/cli": "2.28.1"
+  }
+}

@@ -39,7 +39,7 @@ jobs:
         env:
           HASURA_ENDPOINT: ${{ secrets.HASURA_ENDPOINT }}
           HASURA_ADMIN_SECRET: ${{ secrets.HASURA_SECRET }}
-          HASURA_WORKDIR: safe-shuttle-track
+          HASURA_WORKDIR: api-gateway
           HASURA_ENGINE_VERSION: v2.45.1
       - name: Metadata OK
         run: echo "Metadata OK"

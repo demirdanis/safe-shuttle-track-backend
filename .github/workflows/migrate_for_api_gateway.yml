@@ -16,7 +16,7 @@ jobs:
       - name: Apply hasura migrations
         uses: smplrspace/hasura-action@v3
         with:
-          args: migrate apply --database-name postgres-safe-shuttle-track-core
+          args: migrate apply --project safe-shuttle-track --database-name postgres-safe-shuttle-track-core
         env:
           HASURA_ENDPOINT: ${{ secrets.HASURA_ENDPOINT }}
           HASURA_ADMIN_SECRET: ${{ secrets.HASURA_SECRET }}

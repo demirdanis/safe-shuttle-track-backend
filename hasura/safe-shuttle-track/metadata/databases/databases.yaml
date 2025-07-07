@@ -1,1 +1,9 @@
-[]
+- name: postgres-safe-shuttle-track-core
+  kind: postgres
+  configuration:
+    connection_info:
+      database_url:
+        from_env: HASURA_GRAPHQL_SAFE_SHUTTLE_TRACK_CORE_DATABASE_URL
+      isolation_level: read-committed
+      use_prepared_statements: false
+  tables: "!include postgres-safe-shuttle-track-core/tables/tables.yaml"

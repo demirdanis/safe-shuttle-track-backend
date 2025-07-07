@@ -2,6 +2,14 @@
   "name": "safe-shuttle-track-backend",
   "version": "0.0.1",
   "private": true,
+  "workspaces": [
+    "auth-service",
+    "notification-service",
+    "tracking-service",
+    "trip-service",
+    "user-service",
+    "api-gateway"
+  ],
   "scripts": {
     "start:gateway": "cd api-gateway && pnpm start",
     "start:auth": "cd auth-service && pnpm start",
@@ -22,7 +30,7 @@
     "docker:logs": "docker-compose logs -f",
     "docker:restart": "docker-compose restart",
     "docker:clean": "docker-compose down -v && docker system prune -f"
-  }, 
+  },
   "devDependencies": {
     "@changesets/cli": "2.28.1"
   }
